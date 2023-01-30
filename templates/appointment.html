@@ -1,0 +1,59 @@
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static',filename='css/contact1.css') }}">
+
+    {% endblock %}
+
+
+{% extends 'base1.html' %}
+
+{% block content %}
+    <div class="container shadow min-vh-100 p-4">
+        <p style="text-align: center; background-color: #1977cc; padding: 10px; border-radius: 5px; color: white;">appointment</p>
+    <form class="row g-3" method="post">
+        <div class="col-md-6">
+          <label for="inputEmail4" class="form-label">Email</label>
+          <input type="email" name="email" value="{{valemail}}" class="form-control" id="inputEmail4">
+        </div>
+        <div class="col-md-6">
+          <label for="inputPassword4" class="form-label">contact no </label>
+          <input type="number" name="contact" class="form-control" id="inputPassword4">
+        </div>
+        <div class="col-12">
+          <label for="inputAddress" class="form-label">full name</label>
+          <input type="text" name="name" class="form-control" id="inputAddress" placeholder="full name">
+        </div>
+        <div class="col-12">
+          <label for="inputAddress2" class="form-label">disease type</label>
+          <select id="inputState" name="type" class="form-select">
+            <option selected>Cataract</option>
+            <option>Conjunctivitis</option>
+            <option>diebatic Retinopathy</option>
+            <option>glaucoma</option>
+           
+          </select>
+        </div>
+        <div class="col-md-6">
+          <label for="inputCity" class="form-label">select date</label>
+          <input type="date" name="date" class="form-control" id="inputCity">
+        </div>
+        <div class="col-md-6">
+          <label for="inputState" class="form-label">Select age</label>
+          <select id="inputState" name="age" class="form-select">
+            <option selected>above 18</option>
+            <option>between 2-17</option>
+            <option>between 19-50</option>
+          </select>
+          </div>
+       
+        <div class="col-12">
+            <label for="exampleFormControlTextarea1" class="form-label">Description of disease</label>
+            <textarea class="form-control" name="desc" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+
+      </form>
+      </div>
+
+    {%endblock%}

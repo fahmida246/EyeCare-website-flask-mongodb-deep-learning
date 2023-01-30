@@ -1,0 +1,77 @@
+{% extends "base2.html" %}
+
+
+{% block content %}
+<!-- <p>Hello You have Logged in as {{ email }}</p> -->
+
+<div class="container-fluid">
+    <div class="row">
+        <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block  sidebar collapse" style="background-color: antiquewhite;">
+            <div class="position-sticky">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="{{ url_for('showappoint_ad') }}">
+                        <i class="fa-solid fa-prescription-bottle-medical"></i>
+                        <span class="ml-2">show appointments</span>
+                      </a>
+                    </li>
+                 
+                
+                 
+                 
+                 
+                   
+                  </ul>
+            </div>
+        </nav>
+        <main class="col-md-9 ml-sm-auto col-lg-10 px-md-4 py-4">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Overview</li>
+                </ol>
+            </nav>
+            <h1 class="h2">Dashboard</h1>
+           
+            <p style="background-color: #ADD8E6;">hello! {{email}}</p>
+            
+            <div class="row my-4">
+                <div class="col-12 col-md-6 col-lg-3 mb-4 mb-lg-0">
+                    <div class="card">
+                        <h5 class="card-header">New doctors</h5>
+                        <div class="card-body">
+                          <h5 class="card-title">50</h5>
+                          <p class="card-text">Feb 1 - Apr 1</p>
+                          <p class="card-text text-success">18.2% increase since last month</p>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-12 col-md-6 mb-4 mb-lg-0 col-lg-3">
+                    <div class="card">
+                        <h5 class="card-header">New tips </h5>
+                        <div class="card-body">
+                          <h5 class="card-title">100</h5>
+                          <p class="card-text">Feb 1 - Apr 1</p>
+                          <p class="card-text text-success">4.6% increase since last month</p>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-12 col-md-6 mb-4 mb-lg-0 col-lg-3">
+                    <div class="card">
+                        <h5 class="card-header"> New medicine</h5>
+                        <div class="card-body">
+                          <h5 class="card-title">43</h5>
+                          <p class="card-text">Feb 1 - Apr 1</p>
+                          <p class="card-text text-danger">2.6% decrease since last month</p>
+                        </div>
+                      </div>
+                </div>
+                
+            </div>
+           
+           
+        </main>
+    </div>
+</div>
+
+{% endblock %}

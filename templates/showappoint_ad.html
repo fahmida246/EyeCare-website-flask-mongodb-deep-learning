@@ -1,0 +1,55 @@
+{% block head %}
+
+
+    {% endblock %}
+
+
+{% extends 'base1.html' %}
+
+{% block content %}
+
+<style>
+    .b1 {
+        background-color: #ADD8E6;
+    }
+</style>
+
+<section class="bg-light text-light p-5">
+    <div class="container">
+            <form action="/searchforjob" method="get">
+
+                <div class="input-group " >
+
+                    <input type="search" class="form-control" placeholder="search" name="" id="search">
+                    <button class="btn btn-dark btn-lg" type="submit">Submit</button>
+
+                </div>
+            </form>
+        </div>
+</section>
+
+<div class="container my-3 ">
+    <h3>The appointments are:</h3>
+    {% for appoint in appoints %}
+    <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative b1">
+        <div class="col p-4 d-flex flex-column position-static">
+            <p class="mb-0">Email: {{appoint["email"]}}</p>
+            <p class="mb-0">Contact: {{appoint["contact"]}}</p>
+            <p class="mb-0">Name: {{appoint["name"]}}</p>
+            <p class="mb-0">Disease type: {{appoint["type"]}}</p>
+            <p class="mb-0">Preffered date: {{appoint["date"]}}</p>
+            <p class="mb-0">Age: {{appoint["age"]}}</p>
+            <p class="mb-0">Description: {{appoint["desc"]}}</p>
+           
+            <a class="btn btn-sm" href="{{ url_for('feedback', id=appoint['_id']) }}" > <i class="fa-regular fa-message"></i>  send feedback</a> 
+            
+            </div>
+
+    </div>
+    {% endfor %}
+</div>
+
+
+</div>
+
+    {%endblock%}

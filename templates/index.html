@@ -1,0 +1,366 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+    * {
+    font-family: 'Montserrat', sans-serif;
+}
+/* body{
+    background-image: url(./assets/bodyBg.png);
+} */
+/* carousel section start */
+
+
+.carousel-item {
+    height: 90vh;
+    min-width: 300px;
+}
+
+.bg-1 {
+    background-image: url(../static/assets/header.jpg);
+}
+
+.bg-2 {
+    background-image: url(/static/images/cover/cover-1.png);
+}
+
+.bg-3 {
+    background-image: url(/static/images/cover/cover-3.jpg);
+}
+
+.bg-1,
+.bg-2,
+.bg-3 {
+    background-size: cover;
+    background-position: center;
+}
+
+.carousel-caption {
+    bottom: 200px !important;
+    z-index: 2;
+}
+
+.carousel-inner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+/*--carousel secton end--------- */
+/* about us */
+.h-content{
+    height: 30vh;
+}
+.aboutUs{
+    width: 50vh;
+    height: 30vh;
+}
+.aboutUs img{
+    width: 100%;
+    height: 150%;
+    border-radius: 50%;
+}
+/* about us end*/
+/* services */
+.service{
+    width: 100%;
+    height: 300px;
+}
+.service img{
+    width: 100%;
+    height:100%;
+}
+/* services end */
+
+@media screen and (max-width:576px) {
+
+    .res {
+        flex-direction: column;
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+
+    }
+
+    .caption-font {
+        font-size: 3rem;
+    }
+
+    .carousel-caption {
+        bottom: 100px !important;
+    }
+
+}
+
+@media screen and (max-width:960px) {
+
+
+}
+</style>
+
+<div class="container my-4">
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item  active bg-1">
+                <div class="carousel-caption">
+                    <h1 class="caption-font fw-bold">Your Eye Our Care</h1>
+                    <p class="">We Provide You World's Best Service.</p>
+                    <div class="btn btn-outline-info">Learn More</div>
+                </div>
+            </div>
+            <div class="carousel-item bg-2">
+                <div class="carousel-caption">
+                    <h1 class="caption-font fw-bold ">Your Eye Our Care</h1>
+                    <p>Some representative placeholder content for the second slide.</p>
+                    <div class="btn btn-outline-info">Learn More</div>
+                </div>
+            </div>
+            <div class="carousel-item bg-3">
+                <div class="carousel-caption">
+                    <h1 class="caption-font fw-bold ">Your Eye Our Care</h1>
+                    <p>Some representative placeholder content for the third slide.</p>
+                    <div class="btn btn-outline-info">Learn More</div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 text-center py-5">
+            <h1 class="fw-bold caption-font-2">What we are</h1>
+            <hr class="w-25 mx-auto">
+        </div>
+    </div>
+    <div class="row d-flex align-items-center mb-5">
+        <div class="col-sm-0 col-lg-2"></div>
+        <div class="col-sm-12 col-lg-4">
+            <div class="aboutUs mb-5">
+                <img src="static/assets/header.jpg" class="sm-visually-hidden"  alt="">
+            </div>
+        </div>
+        <div class="col-sm-12 col-lg-4">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum sed nemo ipsum molestias qui incidunt
+                maxime delectus, iure earum accusamus placeat eveniet quod? Dolorum dignissimos doloribus corporis
+                eos, iusto asperiores explicabo dolor aut, velit molestiae laudantium inventore non maxime
+                provident.</p>
+        </div>
+        <div class="col-sm-0 col-lg-2"></div>
+    </div>
+
+
+</div>
+
+<!-- ABOUT US SECTION END -->
+
+<!-- Services section start -->
+<section id="Services" class="container">
+    <div class="row mt-5">
+        <div class="col-12 text-center py-5">
+            <h1 class="fw-bold caption-font-2">Our Best Services</h1>
+            <p class="lead">It is a long established fact that a reader will be distracted by the readable <br>
+                content of a page when looking at its layout.</p>
+        </div>
+    </div>
+    <div class="container py-4">
+        <div class="row g-4">
+            <div class="col-md-12 col-lg-6">
+                <a href="/Service1.html" class="text-decoration-none text-black">
+                    <div class="border bg-light d-flex res">
+                        <div class=""> <img class="" src="static/images/course/cata-1.png" alt=""></div>
+                        <div class=" px-4 py-4">
+                            <h3 class="fw-bold">Cataract</h3>
+                            <p>cataract develops when anyone can feel the lens of anyone’s eye becomes foggy. 
+                                If cataract clouds over the lens, then the eyes can’t see clearly. so, this leads to blurry vision,
+                                 and trouble seeing.</p>
+                            <!-- <a class="text-decoration-none fs-5 fw-bold text-info" href="">Price $20</a> -->
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-md-12 col-lg-6">
+                <div class="border bg-light d-flex res">
+                    <div class=""> <img src="static/images/course/gla-2.png" alt=""></div>
+                    <div class=" px-4 py-4">
+                        <h3 class="fw-bold">Galucoma</h3>
+                        <p>An abnormality in the drainage system of the eye can cause fluid to accumulate, 
+                            resulting in excessive pressure that damages the optic nerve.The difference between the ratio of the optic cup and the optic disc is greater than .5 is known as glaucoma.
+                        </p>
+                        <!-- <a class="text-decoration-none fw-bold text-info" href="">Price $20</a> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-lg-6">
+                <div class="border bg-light d-flex res">
+                    <div class=""> <img src="static/images/course/con-3.png" alt=""></div>
+                    <div class=" px-4 py-4">
+                        <h3 class="fw-bold">Conjunctivitis</h3>
+                        <p>Conjunctivitis or Pink eye is an inflammatory condition of the            clear membranes that surround and cover the white portion of the eyeball. 
+                            When the small blood vessels in the conjunctiva become swollen and painful, they become much more visible.</p>
+                        <!-- <a class="text-decoration-none fw-bold text-info" href="">Price $20</a> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-lg-6">
+                <div class="border bg-light d-flex res">
+                    <div class=""> <img src="static/images/course/dr-4.png" alt=""></div>
+                    <div class=" px-4 py-4">
+                        <h3 class="fw-bold">Diabetes Retinopathy</h3>
+                        <p>Abnormal blood vessels develop in the retina they are the reason for poor blood flow as well as leak blood and 
+                            other fluids into the vitreous that make the retina swell which is the reason for blurred vision or blocking all vision.</p>
+                        <!-- <a class="text-decoration-none fw-bold text-info" href="">Price $20</a> -->
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="col-md-12 col-lg-6">
+                <div class="border bg-light d-flex res">
+                    <div class=""> <img src="images/course/course-6.png" alt=""></div>
+                    <div class=" px-4 py-4">
+                        <h3 class="fw-bold">Motion Graphics</h3>
+                        <p>Some quick example text to build on the card title
+                            and make up the bulk of the card.</p>
+                        <a class="text-decoration-none fw-bold text-info" href="">Price $20</a>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12 text-center py-5">
+            <div class="btn btn-outline-info">See more</div>
+        </div>
+    </div>
+</section>
+<!-- Services section end -->
+
+<!-- doctors section start -->
+<div class="container my-5" id="success">
+    <div class="caption py-5">
+        <h1 class="fw-bold caption-font-2">Meet Our Successfull <br>Doctors</h1>
+        <p class="lead">It is a long established fact that a reader will be distracted by the <br>
+            readable content of a page when looking at its layout.</p>
+    </div>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4">
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <img src="static/images/student/student-1.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title fw-bold">Dr. A</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                        the card's
+                        content.</p>
+
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <img src="static/images/student/student-2.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title fw-bold">Dr. B</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                        the card's
+                        content.</p>
+
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <img src="static/images/student/student-3.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title fw-bold">Dr. C</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                        the card's
+                        content.</p>
+
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <img src="static/images/student/student-4.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title fw-bold">Dr. D</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                        the card's
+                        content.</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 text-center py-5">
+            <div class="btn btn-outline-info">See more Doctors </div>
+        </div>
+    </div>
+</div>
+<!-- doctors section end -->
+
+<!-- Appointment setion start  -->
+<div class="container bg-info text-white my-5 rounded-3" id="register">
+    <div class="row p-5">
+        <div class="col-8">
+            <h1 class="fw-bold caption-font-2">Get Appointment?</h1>
+            <p class="">It is a long established fact that a reader will be distracted by the
+                readable content of a page when looking at its layout.</p>
+        </div>
+        <div class="col-4 py-4 text-end">
+            <a href="/Appointment.html"><button class="btn btn-outline-light">Click Here</button> </a>
+        </div>
+    </div>
+</div>
+<!-- Appointment setion end -->
+<!-- footer area -->
+<div class="container-fluid bg-dark text-white">
+    <div class="row text-center">
+        <div class="col-12 py-5">
+            <h1 class="fw-bold"><a class="navbar-brand fw-bold fs-2 py-3" href="#"><span
+                        class="text-warning">Eye</span><span class="text-info">Care</span></a></h1>
+            <p class="lead py-4">Jahurul Islam City Gate, A/2 Jahurul Islam Ave,<br>
+
+                Dhaka,Bangladesh <br>
+                Privacy Ploicy | Terms of use</p>
+
+            <span class="p-3"><a href="" class="text-decoration-none text-white fw-bold fs-3 "><i
+                        class="fa-brands fa-facebook"></i></a></span>
+            <span class="p-3"><a href="" class="text-decoration-none text-white fw-bold fs-3  mx-2"><i
+                        class="fa-brands fa-square-whatsapp"></i></a></span>
+            <span class="p-3"><a href="" class="text-decoration-none text-white fw-bold fs-3 mx-2"><i
+                        class="fa-brands fa-google-plus"></i></a></span>
+            <span class="p-3"><a href="" class="text-decoration-none text-white fw-bold fs-3 mx-2"><i
+                        class="fa-brands fa-twitter"></i></a></span>
+
+        </div>
+    </div>
+</div>
+
+
+{% endblock  %}
